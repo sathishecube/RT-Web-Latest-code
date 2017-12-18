@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="54" passed="54">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2475705" started-at="2017-12-15T12:17:52Z" finished-at="2017-12-15T12:59:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2475705" started-at="2017-12-15T12:17:52Z" finished-at="2017-12-15T12:59:08Z">
+      <class name="dd_core.TestCore">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:dd_core.TestCore@52dba3]" name="setUp" is-config="true" duration-ms="16" started-at="2017-12-15T17:47:52Z" finished-at="2017-12-15T17:47:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login()[pri:1, instance:dd_core.TestCore@52dba3]" name="login" duration-ms="11" started-at="2017-12-15T17:47:52Z" finished-at="2017-12-15T17:47:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="reeferstatus()[pri:2, instance:dd_core.TestCore@52dba3]" name="reeferstatus" duration-ms="2475553" started-at="2017-12-15T17:47:52Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferstatus -->
+        <test-method status="PASS" signature="reefermultitemp()[pri:3, instance:dd_core.TestCore@52dba3]" name="reefermultitemp" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reefermultitemp -->
+        <test-method status="PASS" signature="reefermaintenance()[pri:4, instance:dd_core.TestCore@52dba3]" name="reefermaintenance" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reefermaintenance -->
+        <test-method status="PASS" signature="reeferpretrip()[pri:5, instance:dd_core.TestCore@52dba3]" name="reeferpretrip" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferpretrip -->
+        <test-method status="PASS" signature="reeferalarm()[pri:6, instance:dd_core.TestCore@52dba3]" name="reeferalarm" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferalarm -->
+        <test-method status="PASS" signature="reefertempprofile()[pri:7, instance:dd_core.TestCore@52dba3]" name="reefertempprofile" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reefertempprofile -->
+        <test-method status="PASS" signature="reeferimpact()[pri:8, instance:dd_core.TestCore@52dba3]" name="reeferimpact" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferimpact -->
+        <test-method status="PASS" signature="reeferITA()[pri:9, instance:dd_core.TestCore@52dba3]" name="reeferITA" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferITA -->
+        <test-method status="PASS" signature="reeferSM()[pri:10, instance:dd_core.TestCore@52dba3]" name="reeferSM" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferSM -->
+        <test-method status="PASS" signature="reeferfuelflows()[pri:11, instance:dd_core.TestCore@52dba3]" name="reeferfuelflows" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferfuelflows -->
+        <test-method status="PASS" signature="reeferdooralarms()[pri:12, instance:dd_core.TestCore@52dba3]" name="reeferdooralarms" duration-ms="2" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferdooralarms -->
+        <test-method status="PASS" signature="logisticCLM()[pri:13, instance:dd_core.TestCore@52dba3]" name="logisticCLM" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logisticCLM -->
+        <test-method status="PASS" signature="logistic()[pri:14, instance:dd_core.TestCore@52dba3]" name="logistic" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logistic -->
+        <test-method status="PASS" signature="logisticWayBill()[pri:15, instance:dd_core.TestCore@52dba3]" name="logisticWayBill" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logisticWayBill -->
+        <test-method status="PASS" signature="orderstatus()[pri:16, instance:dd_core.TestCore@52dba3]" name="orderstatus" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderstatus -->
+        <test-method status="PASS" signature="ordermanifest()[pri:17, instance:dd_core.TestCore@52dba3]" name="ordermanifest" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ordermanifest -->
+        <test-method status="PASS" signature="disparitystatus()[pri:18, instance:dd_core.TestCore@52dba3]" name="disparitystatus" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disparitystatus -->
+        <test-method status="PASS" signature="fuelrefuel()[pri:19, instance:dd_core.TestCore@52dba3]" name="fuelrefuel" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fuelrefuel -->
+        <test-method status="PASS" signature="fuelrefuellocation()[pri:20, instance:dd_core.TestCore@52dba3]" name="fuelrefuellocation" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fuelrefuellocation -->
+        <test-method status="PASS" signature="refuelsummaryhistory()[pri:21, instance:dd_core.TestCore@52dba3]" name="refuelsummaryhistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refuelsummaryhistory -->
+        <test-method status="PASS" signature="fuelusagesummary()[pri:22, instance:dd_core.TestCore@52dba3]" name="fuelusagesummary" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fuelusagesummary -->
+        <test-method status="PASS" signature="Inventorysummary()[pri:23, instance:dd_core.TestCore@52dba3]" name="Inventorysummary" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Inventorysummary -->
+        <test-method status="PASS" signature="reeferInventory()[pri:24, instance:dd_core.TestCore@52dba3]" name="reeferInventory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferInventory -->
+        <test-method status="PASS" signature="yardInventory()[pri:25, instance:dd_core.TestCore@52dba3]" name="yardInventory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- yardInventory -->
+        <test-method status="PASS" signature="regionInventory()[pri:26, instance:dd_core.TestCore@52dba3]" name="regionInventory" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regionInventory -->
+        <test-method status="PASS" signature="cstatus()[pri:27, instance:dd_core.TestCore@52dba3]" name="cstatus" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cstatus -->
+        <test-method status="PASS" signature="chistory()[pri:28, instance:dd_core.TestCore@52dba3]" name="chistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chistory -->
+        <test-method status="PASS" signature="scheduledcommands()[pri:29, instance:dd_core.TestCore@52dba3]" name="scheduledcommands" duration-ms="3" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scheduledcommands -->
+        <test-method status="PASS" signature="pollcommands()[pri:30, instance:dd_core.TestCore@52dba3]" name="pollcommands" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pollcommands -->
+        <test-method status="PASS" signature="controlcommands()[pri:31, instance:dd_core.TestCore@52dba3]" name="controlcommands" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- controlcommands -->
+        <test-method status="PASS" signature="orderdisparity()[pri:32, instance:dd_core.TestCore@52dba3]" name="orderdisparity" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderdisparity -->
+        <test-method status="PASS" signature="reeferstatushistory()[pri:33, instance:dd_core.TestCore@52dba3]" name="reeferstatushistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferstatushistory -->
+        <test-method status="PASS" signature="reefermultitemphistory()[pri:34, instance:dd_core.TestCore@52dba3]" name="reefermultitemphistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reefermultitemphistory -->
+        <test-method status="PASS" signature="ReefersPretripHistory()[pri:36, instance:dd_core.TestCore@52dba3]" name="ReefersPretripHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReefersPretripHistory -->
+        <test-method status="PASS" signature="ReeferMaintenanceHistory()[pri:35, instance:dd_core.TestCore@52dba3]" name="ReeferMaintenanceHistory" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReeferMaintenanceHistory -->
+        <test-method status="PASS" signature="ReefersAlarmHistory()[pri:37, instance:dd_core.TestCore@52dba3]" name="ReefersAlarmHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReefersAlarmHistory -->
+        <test-method status="PASS" signature="ReefersTempProfileHistory()[pri:38, instance:dd_core.TestCore@52dba3]" name="ReefersTempProfileHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReefersTempProfileHistory -->
+        <test-method status="PASS" signature="reeferITAhistory()[pri:39, instance:dd_core.TestCore@52dba3]" name="reeferITAhistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reeferITAhistory -->
+        <test-method status="PASS" signature="ReefersSMHistory()[pri:40, instance:dd_core.TestCore@52dba3]" name="ReefersSMHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReefersSMHistory -->
+        <test-method status="PASS" signature="ReefersFuelflowHistory()[pri:41, instance:dd_core.TestCore@52dba3]" name="ReefersFuelflowHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReefersFuelflowHistory -->
+        <test-method status="PASS" signature="ReeferRouteHistory()[pri:42, instance:dd_core.TestCore@52dba3]" name="ReeferRouteHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReeferRouteHistory -->
+        <test-method status="PASS" signature="ReefersDoorAlarmHistory()[pri:43, instance:dd_core.TestCore@52dba3]" name="ReefersDoorAlarmHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReefersDoorAlarmHistory -->
+        <test-method status="PASS" signature="AssetCommandHistory()[pri:44, instance:dd_core.TestCore@52dba3]" name="AssetCommandHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssetCommandHistory -->
+        <test-method status="PASS" signature="OrderHistory()[pri:45, instance:dd_core.TestCore@52dba3]" name="OrderHistory" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistory -->
+        <test-method status="PASS" signature="ReefersImpactHistory()[pri:46, instance:dd_core.TestCore@52dba3]" name="ReefersImpactHistory" duration-ms="2" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReefersImpactHistory -->
+        <test-method status="PASS" signature="LogisticUtilizationHistory()[pri:47, instance:dd_core.TestCore@52dba3]" name="LogisticUtilizationHistory" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogisticUtilizationHistory -->
+        <test-method status="PASS" signature="LogisticCLMHistory()[pri:48, instance:dd_core.TestCore@52dba3]" name="LogisticCLMHistory" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogisticCLMHistory -->
+        <test-method status="PASS" signature="LogisticWaybillHistory()[pri:49, instance:dd_core.TestCore@52dba3]" name="LogisticWaybillHistory" duration-ms="2" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogisticWaybillHistory -->
+        <test-method status="PASS" signature="DisparityStautsHistory()[pri:50, instance:dd_core.TestCore@52dba3]" name="DisparityStautsHistory" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DisparityStautsHistory -->
+        <test-method status="PASS" signature="FSMADocs()[pri:51, instance:dd_core.TestCore@52dba3]" name="FSMADocs" duration-ms="0" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FSMADocs -->
+        <test-method status="PASS" signature="TKHMIDisplay()[pri:52, instance:dd_core.TestCore@52dba3]" name="TKHMIDisplay" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TKHMIDisplay -->
+        <test-method status="PASS" signature="FTA()[pri:53, instance:dd_core.TestCore@52dba3]" name="FTA" duration-ms="1" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FTA -->
+        <test-method status="PASS" signature="setting()[pri:54, instance:dd_core.TestCore@52dba3]" name="setting" duration-ms="3" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:dd_core.TestCore@52dba3]" name="tearDown" is-config="true" duration-ms="1139" started-at="2017-12-15T18:29:08Z" finished-at="2017-12-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- dd_core.TestCore -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

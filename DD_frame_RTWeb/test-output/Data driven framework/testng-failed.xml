@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Data driven framework]">
+  <test name="RT_Web Regression Test(failed)">
+    <classes>
+      <class name="dd_core.TestCore">
+        <methods>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- dd_core.TestCore -->
+    </classes>
+  </test> <!-- RT_Web Regression Test(failed) -->
+</suite> <!-- Failed suite [Data driven framework] -->
