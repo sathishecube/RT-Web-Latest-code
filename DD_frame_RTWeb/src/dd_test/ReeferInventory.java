@@ -319,7 +319,7 @@ public class ReeferInventory extends TestCore
   						pageSize=page.size();
 	  					try
 	  					{
-	  					BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\ReeferInventoryReport.xls"));
+	  					BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\ReeferInventoryReport.xls"));
 	  					String line;
 	  					
 	  					int m=0;

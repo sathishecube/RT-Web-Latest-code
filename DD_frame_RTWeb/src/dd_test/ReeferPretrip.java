@@ -58,9 +58,9 @@ public class ReeferPretrip extends TestCore
 						try
 						{
 	  					System.out.println( "TC1 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(5000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(2000);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 		  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))		  			
@@ -98,7 +98,8 @@ public class ReeferPretrip extends TestCore
 	  					excel.writePass(d1[i][0], counter, sheet, acop);	  					
 	  				}
 						}catch(Exception e)
-						{e.printStackTrace();}
+						{node.log(LogStatus.SKIP, "Skipped TC1 Execution, it is because of page loading issue or due to some other issue");
+							e.printStackTrace();}
 	  				
 	  				}
 	  			
@@ -107,9 +108,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 		  				System.out.println( "TC2 Execution started.....");
-		  				Thread.sleep(8000);
+		  				Thread.sleep(3000);
 		  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-		  				Thread.sleep(8000);
+		  				Thread.sleep(3000);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 		  			while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))		  			
@@ -178,7 +179,8 @@ public class ReeferPretrip extends TestCore
   						Thread.sleep(1000);
   				
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC2 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				}
 	  				
 	  				
@@ -190,9 +192,9 @@ public class ReeferPretrip extends TestCore
 		  				String eDate =s.dateConvert(d1[i][7]);
 		  				
 	  					System.out.println( "TC3 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  					
@@ -313,7 +315,8 @@ public class ReeferPretrip extends TestCore
   						Thread.sleep(1000);
   					}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{
+	  						node.log(LogStatus.SKIP, "Skipped TC3 Execution, it is because of page loading issue or due to some other issue");e.printStackTrace();}
 	  				}
 	  				
 	  				if(d1[i][0].equalsIgnoreCase("TC4"))
@@ -321,9 +324,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC4 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  				
@@ -379,7 +382,8 @@ public class ReeferPretrip extends TestCore
 	  				    }
 	  				 	}	  				 	
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC4 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 
 	  				}
 	  				
@@ -388,9 +392,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC5 execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  					
@@ -478,7 +482,8 @@ public class ReeferPretrip extends TestCore
 		  				driver.switchTo().alert().accept();
 		  			}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC5 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				
 	  				}
 	  				
@@ -488,9 +493,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC6 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  				
@@ -531,7 +536,8 @@ public class ReeferPretrip extends TestCore
 	  					
 	  				}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC6 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				
 	  				}
 	  			
@@ -540,9 +546,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC7 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  					
@@ -590,7 +596,8 @@ public class ReeferPretrip extends TestCore
 	  					driver.close(); 
 	  					driver.switchTo().window(tabs2.get(0));
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC7 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  					
 	  				}
 	  			
@@ -602,9 +609,9 @@ public class ReeferPretrip extends TestCore
 	  				 	int pageSize=0,recordsCount=0;
 	  				 	
 	  					System.out.println( "TC8 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  					
@@ -625,7 +632,7 @@ public class ReeferPretrip extends TestCore
 	  			 	pageSize=page.size();
 	  			 	try
 	  			 	{
-	  			 	BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\PretripReport.xls"));
+	  			 	BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\PretripReport.xls"));
 	  			 	String line;
 	  			 	
 	  			 	int m=0;
@@ -672,7 +679,8 @@ public class ReeferPretrip extends TestCore
 		  			 	excel.writeFail(d1[i][0], counter, sheet, acop,scr);		  			 	
 	  			 	}	
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC8 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  			 	}
 	  				
 	  				
@@ -681,9 +689,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC9 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
@@ -709,7 +717,8 @@ public class ReeferPretrip extends TestCore
 	  					excel.writeFail(d1[i][0], counter, sheet, acop,scr);	  					
 	  				}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC9 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  					
 	  				}
 	  				
@@ -718,9 +727,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC10 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  				
@@ -746,7 +755,8 @@ public class ReeferPretrip extends TestCore
 	  					excel.writeFail(d1[i][0], counter, sheet, acop,scr);	  					
 	  				}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC10 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				}
 	  				
 	  				if(d1[i][0].equalsIgnoreCase("TC11"))
@@ -754,9 +764,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC11 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  				
@@ -782,7 +792,8 @@ public class ReeferPretrip extends TestCore
 	  					excel.writeFail(d1[i][0], counter, sheet, acop,scr);	  					
 	  				}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC11 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				}
 	  				
 	  				if(d1[i][0].equalsIgnoreCase("TC12"))
@@ -790,9 +801,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC12 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  				
@@ -819,7 +830,8 @@ public class ReeferPretrip extends TestCore
 	  					excel.writeFail(d1[i][0], counter, sheet, acop,scr);	  					
 	  				}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC12 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				}
 	  				
 	  				if(d1[i][0].equalsIgnoreCase("TC13"))
@@ -827,9 +839,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC13 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  					
@@ -861,7 +873,8 @@ public class ReeferPretrip extends TestCore
 	  					excel.writeFail(d1[i][0], counter, sheet, acop,scr);	  				
 	  				}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC13 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				}
 	  				
 	  				if(d1[i][0].equalsIgnoreCase("TC14"))
@@ -869,9 +882,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC14 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))					
@@ -904,7 +917,8 @@ public class ReeferPretrip extends TestCore
 	  					excel.writeFail(d1[i][0], counter, sheet, acop,scr);	  				
   				 	}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC14 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
   				}
 	  				
 	  				if(d1[i][0].equalsIgnoreCase("TC15"))
@@ -912,9 +926,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC15 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(3000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))					
@@ -1006,7 +1020,8 @@ public class ReeferPretrip extends TestCore
   		  					excel.writeFail(d1[i][0], counter, sheet, acop,scr);  		  					
   						}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC15 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  				}
 	  				
 	  				if(d1[i][0].equalsIgnoreCase("TC16"))
@@ -1014,9 +1029,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
 		  			 	System.out.println( "TC16 Execution started.....");
-		  			 	Thread.sleep(8000);
+		  			 	Thread.sleep(4000);
 		  			  driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-		  			Thread.sleep(8000);
+		  			Thread.sleep(3000);
 		  			  driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 		  			  driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 		  			  while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))		  			 
@@ -1089,7 +1104,8 @@ public class ReeferPretrip extends TestCore
 	
 		  			}
 	  					}catch(Exception e)
-	  					{e.printStackTrace();}
+	  					{node.log(LogStatus.SKIP, "Skipped TC16 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
 	  			 	
 	  			 	}
 	  			
@@ -1098,9 +1114,9 @@ public class ReeferPretrip extends TestCore
 	  					try
 	  					{
                            System.out.println( "TC17 Execution started.....");
-                           Thread.sleep(8000);
+                           Thread.sleep(4000);
                            driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-                           Thread.sleep(8000);
+                           Thread.sleep(3000);
                            driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
                            driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
                            while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))                          
@@ -1166,7 +1182,8 @@ public class ReeferPretrip extends TestCore
                               
                            }
 	  					}catch(Exception e)
-	                    {e.printStackTrace();}
+	                    {node.log(LogStatus.SKIP, "Skipped TC17 Execution, it is because of page loading issue or due to some other issue");
+	  						e.printStackTrace();}
                     }
                     
 	  					
