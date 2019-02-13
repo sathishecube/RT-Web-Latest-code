@@ -534,7 +534,7 @@ public class AssetCommandHistory extends TestCore
 	  			 	pageSize=page.size();
 	  			 	try
 	  			 	{
-	  			 	BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\AssetCommandHistoryReport("+Chk+").xls"));
+	  			 	BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\AssetCommandHistoryReport("+Chk+").xls"));
 	  			 	String line;
 	  			 	
 	  			 	int m=0;
