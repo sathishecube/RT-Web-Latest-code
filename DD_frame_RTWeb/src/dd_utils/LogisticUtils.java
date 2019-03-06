@@ -87,7 +87,7 @@ public class LogisticUtils
 						String strXPathMultipleRow = "Null";
 						String rowValue = "";	
 						String clsattr ="";
-						for (int n1 = 2;n1<=tag.size();n1++)
+						for (int n1 = 1;n1<=tag.size();n1++)
 						{						
 							if (SelVal.equals("Active Disparity"))
 							{
@@ -98,16 +98,153 @@ public class LogisticUtils
 							else
 							{
 								//strXPathMultipleRow = ".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]";
-							System.out.println(driver.findElement(By.xpath(".//*[@id='div-100-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getText());
-							rowValue = driver.findElement(By.xpath(".//*[@id='div-100-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getText();
-							clsattr =driver.findElement(By.xpath(".//*[@id='div-100-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getAttribute("class");
+							System.out.println(driver.findElement(By.xpath(".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getText());
+							rowValue = driver.findElement(By.xpath(".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getText();
+							clsattr =driver.findElement(By.xpath(".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getAttribute("class");
 							}
 						
 							if (rowValue.equals("Active Disparity")){
 								rowValue = " Assets with disparity";}	
 							
 							else if (rowValue.equals("-")){
-								rowValue = "Asset without disparity";}	
+								rowValue = "Asset without disparity";}
+
+							
+							if (rowValue.contains(SelVal))
+							{				
+								status = true;
+								//System.out.println(status);
+							}
+							else
+							{
+								status = false;	
+								//System.out.println(status);
+							}
+						}
+						System.out.println(status);;
+					driver.findElement(By.xpath(".//*[@id='show-filters-"+strReportCode+"']/button")).click();
+					Thread.sleep(2000);
+					}
+				}
+				s.clearFilter(driver, obj, clearButton);
+				Thread.sleep(1000);
+				
+	}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+		return status;
+		}
+						
+	}
+	
+	
+	public boolean analyticsFilter(WebDriver driver, Properties obj, String strReportCode, String selFilterOption, String columnToCheck, boolean isSendKeyPresent, String columnType, String xPathApplyButton,String clearButton)
+	{
+		boolean status = true;
+		try{
+			while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+			{
+				Thread.sleep(1000);
+			}
+				WebElement ele = driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"']"));
+				//WebElement ele = driver.findElement(By.xpath(".//*[@id='OEMFilter']"));
+				System.out.println(ele);
+				System.out.println(ele.getTagName());
+				List<WebElement>page=ele.findElements(By.tagName("option"));
+				System.out.println("<<<<<<<<<<<<<"+page.size());
+				for (int k=2; k<=page.size();k++)
+				{			
+					if (s.isElementPresent(By.xpath(".//*[@id='show-filters-"+strReportCode+"']/button"), driver))
+					{
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+  						{
+  							Thread.sleep(1000);	
+  						}
+					}
+					System.out.println("selFilterOption"+selFilterOption+"reportCode"+strReportCode);
+					driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_chosen']/a/span")).click();
+					Thread.sleep(1000);
+					String SelVal = driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_chosen']/div/ul/li["+k+"]")).getAttribute("innerText");
+					System.out.println(">>>>>>>>>>>>>"+SelVal);
+					if (isSendKeyPresent){
+						driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_chosen']/div/div/input")).sendKeys(SelVal);
+						driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_chosen']/div/ul/li[1]")).click();
+					}else{
+						driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_chosen']/div/ul/li["+k+"]")).click();
+					}
+					driver.findElement(By.xpath(obj.getProperty(xPathApplyButton))).click();
+					
+					while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+						{
+							Thread.sleep(1000);
+						}
+					int chkIndex=0;
+					String TotalPages =driver.findElement(By.xpath(obj.getProperty("DAGetNoOfPages"))).getText();
+					System.out.println(TotalPages);
+					String Records="Null";
+					if(TotalPages.contains(" of "))
+					{
+						chkIndex=TotalPages.indexOf(" of ");
+						Records = TotalPages.substring(chkIndex+4);
+						System.out.println(Records);
+					}
+					
+					if(Records.equalsIgnoreCase("0"))
+					{
+						System.out.println("No Record Found for "+SelVal);
+						String acop = "No Record Found";
+							driver.findElement(By.xpath(".//*[@id='show-filters-"+strReportCode+"']/button")).click();
+							Thread.sleep(2000);
+					}
+					else
+					{
+						WebElement chk = driver.findElement(By.xpath(".//*[@id='div-"+strReportCode+"-datagrid-tbody']"));
+						System.out.println(chk.getTagName());
+						List<WebElement>tag=chk.findElements(By.tagName("tr"));
+						System.out.println("%%%%%%%%%%%%"+tag.size());
+						String Records1 = "Null";
+						String strXPathSingleRow = "Null";
+						String strXPathMultipleRow = "Null";
+						String rowValue = "";	
+						String clsattr ="";
+						for (int n1 = 1;n1<=tag.size();n1++)
+						{						
+							if (SelVal.equals("Active Disparity"))
+							{
+								System.out.println(driver.findElement(By.xpath(".//*[@id='div-100-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]/a/span")).getText());
+								rowValue = driver.findElement(By.xpath(".//*[@id='div-100-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]/a/span")).getText();
+								clsattr =driver.findElement(By.xpath(".//*[@id='div-100-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]/a/span")).getAttribute("class");
+							}
+							else
+							{
+								//strXPathMultipleRow = ".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]";
+							System.out.println(driver.findElement(By.xpath(".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getText());
+							rowValue = driver.findElement(By.xpath(".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getText();
+							clsattr =driver.findElement(By.xpath(".//*[@id='div-"+strReportCode+"-datagrid-tbody']/tr["+n1+"]/td["+columnToCheck+"]")).getAttribute("class");
+							}
+						
+							if (rowValue.equals("Active Disparity")){
+								rowValue = " Assets with disparity";}	
+							
+							else if (rowValue.equals("CT")){
+								rowValue = "Carrier";}
+							else if (rowValue.equals("TK")){
+								rowValue = "ThermoKing";}
+							else if (rowValue.equals("ST")){
+								rowValue = "Single-Temp";}
+							else if (rowValue.equals("MT")){
+								rowValue = "Multi-Temp";}
+							else if (rowValue.equals("SS/CS")){
+								rowValue = "Start/Stop";}
+							else if (rowValue.equals("CONT")){
+								rowValue = "Continuous";}
+							else if (rowValue.equals("CONT")){
+								rowValue = "Continuous";}
+							else if (rowValue.equals("MIXED")){
+								rowValue = "Mixed";}
+
 							
 							if (rowValue.contains(SelVal))
 							{				
@@ -892,7 +1029,8 @@ public class LogisticUtils
 				List<WebElement>page=ele.findElements(By.tagName("option"));
 				System.out.println("<<<<<<<<<<<<<"+page.size());
 				for (int k=2; k<=page.size();k++)
-				{				
+				{			
+					
 					if (s.isElementPresent(By.xpath(".//*[@id='show-filters-"+strReportCode+"']/button"), driver))
 					{
 						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
@@ -900,7 +1038,7 @@ public class LogisticUtils
   							Thread.sleep(1000);	
   						}
 					}
-					System.out.println("selFilterOption"+selFilterOption+"reportCode"+strReportCode);
+					System.out.println("selFilterOption "+selFilterOption+" reportCode "+strReportCode);
 					driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_"+strReportCode+"_chosen']/a/span")).click();
 					Thread.sleep(1000);
 					String SelVal = driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_"+strReportCode+"_chosen']/div/ul/li["+k+"]")).getText();
@@ -911,12 +1049,18 @@ public class LogisticUtils
 						driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_"+strReportCode+"_chosen']/div/ul/li[1]")).click();
 					}else{
 						System.out.println("Inside else condition");
-						driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_"+strReportCode+"_chosen']/a")).click();
-						driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_"+strReportCode+"_chosen']/div/ul/li["+k+"]")).click();		
+						Thread.sleep(1000);
+						//driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_"+strReportCode+"_chosen']/a")).click();
+						//Thread.sleep(3000);
+						driver.findElement(By.xpath(".//*[@id='"+selFilterOption+"_"+strReportCode+"_chosen']/div/ul/li["+k+"]")).click();
 						
+						//driver.findElement(By.xpath("/html/body/div[8]/div/div/div/div["+xx+]"_"+strReportCode+"_chosen']/a")).click();
 					}
 					
-					//Thread.sleep(10000);
+					
+					
+					
+					Thread.sleep(1000);
 					driver.findElement(By.xpath(obj.getProperty(xPathApplyButton))).click();
 					
 					while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))

@@ -2,7 +2,20 @@ package dd_utils;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.sql.Timestamp;
+import java.util.Hashtable;
 import java.util.Properties;
+
+import javax.jms.ObjectMessage;
+import javax.jms.Queue;
+import javax.jms.QueueConnection;
+import javax.jms.QueueConnectionFactory;
+import javax.jms.QueueSender;
+import javax.jms.QueueSession;
+import javax.jms.Session;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -11,9 +24,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+
+
+
+
+
+import com.startrak.GSMMsgProducer;
+//import com.startrak.GSMMsgProducer;
+import com.startrak.gprs.GprsDeliverMessage;
+import com.startrak.gprs.GprsDeliverMessage.SourceType;
+
+
 public class pollCommandsHelp 
 {
 	TestUtil s = new TestUtil();
+	GSMMsgProducer msg1 =new GSMMsgProducer();
 	public boolean pageCheck(WebDriver driver, Properties obj, String assetId)
 	{
 		boolean status = false;
@@ -81,11 +106,12 @@ public class pollCommandsHelp
 		}
 	}
 	
-	public boolean sendPollCommand(WebDriver driver, Properties obj, String assetId,String message)
+	public boolean sendPollCommand(WebDriver driver, Properties obj, String assetId,String message, String hex)
 	{
 		boolean status=false,clicked=false;
 		try
 		{
+			//String[][] input =TestUtil.getData("PollCommands");
 			driver.findElement(By.xpath(obj.getProperty("Searchbox"))).clear();
 			driver.findElement(By.xpath(obj.getProperty("Searchbox"))).sendKeys(assetId);
 			driver.findElement(By.xpath(obj.getProperty("Searchbutton"))).click();
@@ -109,6 +135,7 @@ public class pollCommandsHelp
 				{
 					driver.findElement(By.xpath("html/body/div[24]/div/div/div[2]/ul/li["+i+"]/label/span/span")).click();
 					System.out.println("Clicked on the message "+message);
+					
 					labelnum=i;
 					clicked=true;
 					break;
@@ -129,6 +156,8 @@ public class pollCommandsHelp
 					System.out.println("No alert present... Error...");
 					status=false;
 				}
+				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))							
+					Thread.sleep(1000);
 				
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(obj.getProperty("CommandSentConfirmation"))));
 				
@@ -142,7 +171,16 @@ public class pollCommandsHelp
 					if(true)
 					{
 						System.out.println("Command Sent successfully...");
+						/* Need to implement the simulator things here*/
+						//System.out.println("This is local QA environment so, Command send failed.Please try again after some time.");
+						System.out.println("Now we are going to use simulator to push the messages to OC4J");
 						
+						
+						msg1.main(hex);
+						
+						
+						
+						/* Need to implement the simulator things here*/
 						dbChecker db = new dbChecker();
 						//System.out.println(driver.findElement(By.xpath("html/body/div[28]/div/div/div[2]/ul/li["+labelnum+"]/label")).getText()+"mmmmm");
 						if(db.commandTableCheck(assetId, message))
@@ -185,4 +223,5 @@ public class pollCommandsHelp
 			return status;
 		}
 	}
+
 }

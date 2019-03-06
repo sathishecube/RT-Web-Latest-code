@@ -202,11 +202,13 @@ public class sCommandsHelp
 							
 							System.out.println("Date within range");
 							status=true;
+							//driver.findElement(By.xpath(obj.getProperty("DateCancel"))).click();
 	  					}
 	  					else
 	  					{
 	  						System.out.println("Search value not displayed ");
 							status=false;
+							driver.findElement(By.xpath(obj.getProperty("DateCancel"))).click();
 	  					}
 					}
 				}
@@ -342,7 +344,7 @@ public class sCommandsHelp
 		{
 			driver.findElement(By.xpath(obj.getProperty("Downloadthispage"))).click();
 			Thread.sleep(5000);
-			BufferedReader reader = new BufferedReader(new FileReader("\\\\AMXSERVER\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\ScheduledCommandsReport.xls"));
+			BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\ScheduledCommandsReport.xls"));
 			String line;
 			ArrayList<String> tr=new ArrayList<String>();
 			int i=0;

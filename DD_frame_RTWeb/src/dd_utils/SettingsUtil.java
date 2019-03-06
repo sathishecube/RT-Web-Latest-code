@@ -133,8 +133,11 @@ public class SettingsUtil
 			//Support s =new Support();
 			driver.findElement(By.xpath(obj.getProperty("ReeferTrak"))).click();
 			driver.findElement(By.xpath(obj.getProperty("Settings"))).click();
+			Thread.sleep(2000);
 			driver.findElement(By.xpath(obj.getProperty("Displaysettings"))).click();
+			Thread.sleep(2000);
 			driver.findElement(By.xpath(obj.getProperty("SessionExpiration"))).click();
+			Thread.sleep(2000);
 			switch (b)
 			{
 				case "20 minutes" : 	driver.findElement(By.xpath(obj.getProperty("20"))).click();
@@ -154,6 +157,7 @@ public class SettingsUtil
 			//System.out.println("B :"+b);
 			driver.findElement(By.xpath(obj.getProperty("UpdateDispalySettings"))).click();
 			System.out.println("Clicked on the update settings button");
+			Thread.sleep(3000);
 			if(s.isAlertPresent(driver))
 			{
 				Alert alert = driver.switchTo().alert();
@@ -161,13 +165,14 @@ public class SettingsUtil
 				System.out.println("alert text: "+z);
 	  	  		alert.accept();
 			}
-			Thread.sleep(2000);
-			if(s.isAlertPresent(driver))
+			Thread.sleep(5000);
+			/*if(s.isAlertPresent(driver))
 			{
 				Alert alert = driver.switchTo().alert();
 				alert.accept();
 				z= "Session Expired successfully";
-			}
+			}*/
+			z= "Session Expired successfully";
 			System.out.println(z);
 			
 		}
@@ -195,8 +200,11 @@ public class SettingsUtil
 			//Support s =new Support();
 			driver.findElement(By.xpath(obj.getProperty("ReeferTrak"))).click();
 			driver.findElement(By.xpath(obj.getProperty("Settings"))).click();
+			Thread.sleep(2000);
 			driver.findElement(By.xpath(obj.getProperty("Displaysettings"))).click();
+			Thread.sleep(2000);
 			driver.findElement(By.xpath(obj.getProperty("MessagesPerReport"))).click();
+			Thread.sleep(2000);
 		
 			switch (b)
 			{

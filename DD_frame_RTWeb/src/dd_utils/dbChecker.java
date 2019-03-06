@@ -31,7 +31,7 @@ public class dbChecker
 		
 		try 
 		{
-			con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.1.218:1521:ORCL","GP_SENTRY","gpindia");
+			con = DriverManager.getConnection("jdbc:oracle:thin:@172.19.1.133:1521:STGPQA","gp_sentry","gp_sentry");
 		} 
 		catch (SQLException e1) 
 		{
@@ -60,7 +60,7 @@ public class dbChecker
 				System.out.println("No result found...");
 			}
 			
-			query = "select * from command where Asset_Id ='"+id+"' order by SENT_STAMP DESC";
+			query = "select * from REEFER_SENTRY_COMMAND where Reefer_Asset_Id ='"+id+"' order by SENT_STAMP DESC";
 			
 			System.out.println(query);
 			
@@ -80,8 +80,8 @@ public class dbChecker
 					System.out.println("Column Index : "+i);
 					System.out.println("Column name:"+rsmd.getColumnLabel(i));
 					System.out.println("Value : "+r.getString(i));
-					commandCode = r.getString(6);
-					commandType = r.getString(10);
+					commandCode = r.getString(2);
+					commandType = r.getString(5);
 					i++;
 				}
 				j++;
@@ -98,8 +98,8 @@ public class dbChecker
 			String tableCommandCode,tableCommandType;
 			while(r.next())
 			{
-				tableCommandCode=r.getString(1);
-				tableCommandType=r.getString(2);
+				tableCommandCode=r.getString(2);
+				tableCommandType=r.getString(1);
 				System.out.println(tableCommandCode+"::"+commandCode);
 				System.out.println(tableCommandType+"::"+commandType);
 				if(tableCommandCode.equalsIgnoreCase(commandCode) && tableCommandType.equalsIgnoreCase(commandType))

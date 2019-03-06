@@ -11,10 +11,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.startrak.GSMMsgProducer;
+//import com.startrak.GSMMsgProducer;
+//import com.startrak.GSMMsgProducer;
+import com.startrak.gprs.GprsDeliverMessage;
+import com.startrak.gprs.GprsDeliverMessage.SourceType;
+
 
 public class controlCommandsutil
 {
 	TestUtil s = new TestUtil();
+	GSMMsgProducer msg1 =new GSMMsgProducer();
 	public boolean pageCheck(WebDriver driver, Properties obj, String assetId)
 	{
 		boolean status = false;
@@ -70,7 +77,7 @@ public class controlCommandsutil
 		}
 	}
 	
-	public boolean setPoint(WebDriver driver, Properties obj, String assetId, String temp, String date)
+	public boolean setPoint(WebDriver driver, Properties obj, String assetId, String temp, String date, String hex)
 	{
 		boolean status=false;
 		String searchedAsset = ".//*[@id='div-100-datagrid-tbody']/tr/td[1]/label/span[2]/span";
@@ -148,6 +155,7 @@ public class controlCommandsutil
 							}
 							else
 							{
+								msg1.main(hex);
 								dbChecker db = new dbChecker();
 								//System.out.println(driver.findElement(By.xpath("html/body/div[28]/div/div/div[2]/ul/li["+labelnum+"]/label")).getText()+"mmmmm");
 								if(db.commandTableCheck(assetId, temp))
@@ -273,7 +281,7 @@ public class controlCommandsutil
 		}
 	}
 	
-	public boolean sendReeferActions(WebDriver driver, Properties obj, String assetId, String date, String value)
+	public boolean sendReeferActions(WebDriver driver, Properties obj, String assetId, String date, String value, String hex)
 	{
 		boolean status = false;
 		String searchedAsset = ".//*[@id='div-100-datagrid-tbody']/tr/td[1]/label/span[2]/span";
@@ -331,6 +339,18 @@ public class controlCommandsutil
 						{
 							System.out.println(msg);
 							status = true;
+							msg1.main(hex);
+							dbChecker db = new dbChecker();
+							if(db.commandTableCheck(assetId, value))
+							{
+								System.out.println("Pass");
+								status=true;
+							}
+							else
+							{
+								System.out.println("Fail");
+								status=false;
+							}
 							
 						}
 						else
@@ -480,7 +500,7 @@ public class controlCommandsutil
 		}
 	}
 	
-	public boolean sendPowerControl(WebDriver driver, Properties obj, String assetId, String date, String value)
+	public boolean sendPowerControl(WebDriver driver, Properties obj, String assetId, String date, String value, String hex)
 	{
 		boolean status = false;
 		String searchedAsset = ".//*[@id='div-100-datagrid-tbody']/tr/td[1]/label/span[2]/span";
@@ -537,6 +557,24 @@ public class controlCommandsutil
 						{
 							System.out.println(msg);
 							status= true;
+							
+							msg1.main(hex);
+							
+							
+							
+							/* Need to implement the simulator things here*/
+							dbChecker db = new dbChecker();
+							//System.out.println(driver.findElement(By.xpath("html/body/div[28]/div/div/div[2]/ul/li["+labelnum+"]/label")).getText()+"mmmmm");
+							if(db.commandTableCheck(assetId, value))
+							{
+								System.out.println("Pass");
+								status=true;
+							}
+							else
+							{
+								System.out.println("Fail");
+								status=false;
+							}
 							
 						}
 						else

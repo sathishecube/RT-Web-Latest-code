@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.TreeMap;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -149,6 +150,8 @@ public class CmdHistoryUtil
 					driver.findElement(By.xpath(obj.getProperty("StartDate"))).sendKeys(sDate);
 					driver.findElement(By.xpath(obj.getProperty("EndDate"))).sendKeys(eDate);
 					driver.findElement(By.xpath(obj.getProperty("SetDateRange"))).click();
+					while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  						
+							Thread.sleep(1000);
 					String strMain = driver.findElement(By.xpath(obj.getProperty("DateRangeDisplay"))).getText();
 					System.out.println("Date range displayed as expected");
 					
@@ -272,7 +275,7 @@ public class CmdHistoryUtil
 				status=false;
 			}
 			
-			
+			driver.close();
 			
 			driver.switchTo().window(tabs2.get(0));
 			
