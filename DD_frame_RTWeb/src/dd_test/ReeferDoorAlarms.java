@@ -60,7 +60,7 @@ public class ReeferDoorAlarms extends TestCore
 					{
 						try
 						{
-							Thread.sleep(5000);
+							Thread.sleep(4000);
 							System.out.println( "TC1 Execution started.....");
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -641,7 +641,7 @@ public class ReeferDoorAlarms extends TestCore
 							pageSize=page.size();
 							try
 							{
-								BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\DoorAlarmReport.xls"));
+								BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\DoorAlarmReport.xls"));
 								String line;			 	
 								int m=0;
 								while ((line = reader.readLine()) != null)

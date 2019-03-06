@@ -70,7 +70,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC1 Execution started.....");	  					
-	  					Thread.sleep(5000);	  					
+	  					Thread.sleep(4000);	  					
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -303,13 +303,12 @@ public class ReeferMaintenanceHistory extends TestCore
 		  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  					Thread.sleep(1000);
 	  					
-		  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
+		  				
 		  				driver.findElement(By.xpath(".//*[@id='div-100']")).click();
 		  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 		  				Thread.sleep(1000);
 		  				
-		  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-		  				Thread.sleep(1000);
+
 		  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 			  			if(s.isAlertPresent(driver))
 			  			{
@@ -460,7 +459,7 @@ public class ReeferMaintenanceHistory extends TestCore
   					{
 	  					  				
 	  				driver.findElement(By.xpath(Object.getProperty("PrintIcon"))).click();
-  					Thread.sleep(5000);
+  					Thread.sleep(4000);
   					ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
   					
   					System.out.println(tabs2.get(0));
@@ -590,7 +589,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  			 	pageSize=page.size();
 	  			 	try
 	  			 	{
-	  			 	BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\MaintenanceHistoryReport("+Chk+").xls"));
+	  			 	BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\MaintenanceHistoryReport("+Chk+").xls"));
 	  			 	String line;
 	  			 	
 	  			 	int m=0;
@@ -802,9 +801,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  				driver.findElement(By.xpath(".//*[@id='div-100']")).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  				Thread.sleep(1000);
-	  				
-	  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-	  				Thread.sleep(1000);
+
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -882,8 +879,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  				Thread.sleep(1000);
 	  				
-	  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-	  				Thread.sleep(1000);
+
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -964,9 +960,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  				driver.findElement(By.xpath(".//*[@id='div-100']")).click();
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  				Thread.sleep(1000);
-	  				
-	  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-	  				Thread.sleep(1000);
+
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1047,8 +1041,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  				Thread.sleep(1000);
 	  				
-	  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-	  				Thread.sleep(1000);
+
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1167,8 +1160,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  				Thread.sleep(1000);
 	  				
-	  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-	  				Thread.sleep(1000);
+
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1253,8 +1245,7 @@ public class ReeferMaintenanceHistory extends TestCore
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  				Thread.sleep(1000);
 	  				
-	  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-	  				Thread.sleep(1000);
+
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1395,8 +1386,7 @@ public class ReeferMaintenanceHistory extends TestCore
 		  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 		  				Thread.sleep(1000);
 		  				
-		  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-		  				Thread.sleep(1000);
+
 		  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 			  			if(s.isAlertPresent(driver))
 			  			{
@@ -1582,8 +1572,7 @@ public class ReeferMaintenanceHistory extends TestCore
   				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
   				Thread.sleep(1000);
   				
-  				driver.findElement(By.xpath(Object.getProperty("Maintenance"))).click();
-  				Thread.sleep(1000);
+
   				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 	  			if(s.isAlertPresent(driver))
 	  			{

@@ -59,9 +59,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC1 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -111,9 +111,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC2 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))		  				
@@ -195,9 +195,9 @@ public class ReeferFuel extends TestCore
 							String eDate =t.dateConvert(d1[i][7]);
 
 							System.out.println( "TC3 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  				
@@ -323,9 +323,9 @@ public class ReeferFuel extends TestCore
 						try
 						{	  					
 							System.out.println( "TC4 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -391,9 +391,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC5 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -442,9 +442,9 @@ public class ReeferFuel extends TestCore
 								rc++;
 								excel.writePass(d1[i][0], counter, sheet, acop);
 
-								Thread.sleep(8000);
+								Thread.sleep(4000);
 								driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-								Thread.sleep(8000);
+								Thread.sleep(4000);
 								driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 								driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 								while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))		  					
@@ -490,9 +490,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC6 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -543,9 +543,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC7 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -606,9 +606,9 @@ public class ReeferFuel extends TestCore
 							int pageSize=0,recordsCount=0;
 
 							System.out.println( "TC8 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  				
@@ -628,7 +628,7 @@ public class ReeferFuel extends TestCore
 							pageSize=page.size();
 							try
 							{
-								BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\FuelFlowReport.xls"));
+								BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\FuelFlowReport.xls"));
 								String line;
 								int m=0;
 								while ((line = reader.readLine()) != null)
@@ -674,9 +674,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC9 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -712,9 +712,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC10 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -748,9 +748,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC11 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -786,9 +786,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC12 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -825,9 +825,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC13 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -869,9 +869,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC14 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -917,7 +917,7 @@ public class ReeferFuel extends TestCore
 							System.out.println( "TC15 Execution started.....");
 							Thread.sleep(10000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  					
@@ -1020,9 +1020,9 @@ public class ReeferFuel extends TestCore
 						try
 						{
 							System.out.println( "TC16 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))		  			 	
