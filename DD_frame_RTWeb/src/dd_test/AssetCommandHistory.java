@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -66,7 +67,7 @@ public class AssetCommandHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC1 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -129,6 +130,20 @@ public class AssetCommandHistory extends TestCore
   						  	rc++;
   						  	excel.writePass(tc, counter, sheet, acop);  						  
 	  					}	
+	  					driver.findElement(By.xpath(Object.getProperty("Commands"))).click();
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+							Thread.sleep(1000);
+						driver.findElement(By.xpath(Object.getProperty("ClearButton"))).click();
+						if(s.isAlertPresent(driver))
+						{
+							Alert alert;
+							alert = driver.switchTo().alert();
+							System.out.println(alert.getText());
+							String chk1 = driver.switchTo().alert().getText();								
+							alert.accept();
+						}
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+							Thread.sleep(1000);
 	  					}catch(Exception e)
 	  					{e.printStackTrace();}
 	  				
