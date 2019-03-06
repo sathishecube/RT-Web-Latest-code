@@ -17,15 +17,20 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import dd_core.TestCore;
+//import dd_utils.GSMMsgProducer;
 import dd_utils.TestUtil;
 import dd_utils.pollCommandsHelp;
 import dd_utils.sCommandsHelp;
+
+import com.startrak.GSMMsgProducer;
+import com.startrak.gsm.*;
 
 
 public class pollCommands extends TestCore 
 {
 	static TestUtil s =new TestUtil();
 	static pollCommandsHelp help =new pollCommandsHelp();
+	static GSMMsgProducer msg =new GSMMsgProducer();
 		
 	@Test
 	public static Map<String, Object[]> Pollcommandstestcase(Map<String, Object[]> data, int rc ,String sheet, ExtentTest test ,int scase,int ecase) 
@@ -60,6 +65,7 @@ public class pollCommands extends TestCore
 	  				String eopt =input[i][4];
 	  				String assetId = input[i][6];
 	  				String message = input[i][7];
+	  				String hex = input[i][8];
 	  				
 	  				Thread.sleep(5000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelector"))).click();
@@ -103,10 +109,12 @@ public class pollCommands extends TestCore
 							}catch(Exception e )
 							{e.printStackTrace();}
 						case "TC2":
+							while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))							
+								Thread.sleep(1000);
 							System.out.println("TC2 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Reefer Status Poll Command sent successfully");
@@ -134,7 +142,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC3 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll Maintenance Status Command sent successfully");
@@ -162,7 +170,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC4 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll Alarm Status Command sent successfully");
@@ -190,7 +198,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC5 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll GPS Report Command sent successfully");
@@ -218,7 +226,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC6 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Reefer Alarm List Command sent successfully");
@@ -246,7 +254,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC7 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Read Active Intelliset Command sent successfully");
@@ -274,7 +282,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC8 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll Mileage Report Command sent successfully");
@@ -302,7 +310,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC9 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll Temp Profile Command sent successfully");
@@ -330,7 +338,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC10 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll Pretrip Status (TK) Command sent successfully");
@@ -358,7 +366,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC11 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll System Status (TK) Command sent successfully");
@@ -386,7 +394,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC12 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll Terminal Status (TK) Command sent successfully");
@@ -414,7 +422,7 @@ public class pollCommands extends TestCore
 							System.out.println("TC13 Execution started.....");
 							try
 							{
-							if(help.sendPollCommand(driver, Object, assetId, message))
+							if(help.sendPollCommand(driver, Object, assetId, message, hex))
 							{
 								
 								System.out.println("Poll Multi-Temp Status Command sent successfully");

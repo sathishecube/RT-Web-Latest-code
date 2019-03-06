@@ -62,9 +62,9 @@ public class Logistic extends TestCore
   					try
   					{					
   						System.out.println("TC1 Execution started.....");
-  						Thread.sleep(8000);
+  						Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-  						Thread.sleep(5000);
+  						Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
   						driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
   						while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  						
@@ -110,7 +110,7 @@ public class Logistic extends TestCore
   						try
   						{
   							System.out.println("TC2 Execution started.....");
-  							Thread.sleep(8000);
+  							Thread.sleep(4000);
   							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
   							Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -193,7 +193,8 @@ public class Logistic extends TestCore
   			  				String eDate =t.dateConvert(d1[i][7]);
   			  				
 	  						System.out.println( "TC3 Execution started.....");
-	  						Thread.sleep(8000);
+	  						while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  						
+	  							Thread.sleep(1000);
 		  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  					Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -315,7 +316,7 @@ public class Logistic extends TestCore
   						try
   						{
 	  						System.out.println( "TC4 Execution started.....");
-	  						Thread.sleep(8000);
+	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  					Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -331,7 +332,7 @@ public class Logistic extends TestCore
 		  					boolean strFilterResult = false;
 		  					Thread.sleep(5000);
 	  						
-	  						strFilterResult = l.disparity(driver, Object, "200", "isSingleTempEnabled", "3", false, "Text", "LUApplyButton","LUClearFilter");
+	  						strFilterResult = l.checkFilterValue(driver, Object, "200", "isSingleTempEnabled", "3", false, "Text", "LUApplyButton","LUClearFilter");
 	  						System.out.println("<<<<<<<<<<<<<<<<<<<<<Logistic Utilization Filter Status>>>>>>>>>>>>>"+strFilterResult);
 	  						if (strFilterResult == true)
 	  						{
@@ -361,7 +362,7 @@ public class Logistic extends TestCore
   						try
   						{
 	  						System.out.println( "TC5 Execution started.....");	  						
-	  						Thread.sleep(8000);
+	  						Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -418,8 +419,9 @@ public class Logistic extends TestCore
 		  					System.out.println("subtest case 3 is excuting");
 		  					Thread.sleep(5000);
 		  					driver.findElement(By.xpath(Object.getProperty("LUClearAlarm"))).click();
-		  					Thread.sleep(5000);
+		  					Thread.sleep(2000);
 		  					driver.findElement(By.xpath(Object.getProperty("Lsendcmd"))).click();
+		  					Thread.sleep(2000);
 		  					if(t.isAlertPresent(driver))
 								{
 									Alert alert;
@@ -464,7 +466,8 @@ public class Logistic extends TestCore
 		  					driver.findElement(By.xpath(".//*[@id='div-200-datagrid-tbody']/tr[1]/td[1]/label/span[2]/span")).click();
 	  						driver.findElement(By.xpath(Object.getProperty("MoreActions"))).click();
 		  					driver.findElement(By.xpath(Object.getProperty("LUMicroRead"))).click();
-		  					if(t.isAlertPresent(driver))
+		  					Thread.sleep(2000);
+		  					/*if(t.isAlertPresent(driver))
 								{
 									Alert alert;
 									alert = driver.switchTo().alert();
@@ -473,7 +476,7 @@ public class Logistic extends TestCore
 									alert.accept();
 								}
 		  					while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  						
-	  							Thread.sleep(1000);
+	  							Thread.sleep(1000);*/
 	  					
 		  					String getVal2 = driver.findElement(By.xpath(Object.getProperty("LUErrorPopup1"))).getText();
 		  					if (d1[i][8].contains("#"))
@@ -510,7 +513,7 @@ public class Logistic extends TestCore
   						try
   						{
 	  						System.out.println( "TC6 Execution started.....");
-	  						Thread.sleep(8000);
+	  						Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -585,7 +588,7 @@ public class Logistic extends TestCore
   						try
   						{
 	  						System.out.println( "TC7 Execution started.....");
-	  						Thread.sleep(8000);
+	  						Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -810,7 +813,7 @@ public class Logistic extends TestCore
 	  						pageSize=page.size();
 		  					try
 		  					{
-		  					BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\UtilizationReport.xls"));
+		  					BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\UtilizationReport.xls"));
 		  					String line;
 		  					
 		  					int m=0;
@@ -868,7 +871,7 @@ public class Logistic extends TestCore
   						try
   						{ 						
 		  					System.out.println( "TC11 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -910,7 +913,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC12 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -950,7 +953,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC13 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -992,7 +995,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC14 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -1033,7 +1036,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC15 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -1074,7 +1077,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC16 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -1120,7 +1123,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC17 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -1227,7 +1230,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC18 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -1312,7 +1315,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC19 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -1392,7 +1395,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC20 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -1441,7 +1444,7 @@ public class Logistic extends TestCore
 	  					try
 	  					{
 		  					System.out.println( "TC21 Execution started.....");
-		  					Thread.sleep(8000);
+		  					Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						Thread.sleep(4000);
 		  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);

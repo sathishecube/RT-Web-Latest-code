@@ -37,7 +37,9 @@ public class Login extends TestCore
 		{	
 			long stime=System.currentTimeMillis();
 			if(d1[i][0].equalsIgnoreCase("TC1"))
-			{			 
+			{	
+				try
+				{
 				  System.out.println("TC1 Execution started.....");
 				  driver = new FirefoxDriver();
 				  driver.get(Object.getProperty("URL"));				  
@@ -86,12 +88,19 @@ public class Login extends TestCore
 					String scr = t.CaptureScreenshot();					 
 					excel.writeFail(d1[i][0], counter, sheet, acop ,scr);					
 					
-				}				
+				}
+				}catch(Exception e)
+				{node.log(LogStatus.SKIP, "Skipped TC1 Execution, it is because of page loading issue or due to some other issue");
+				e.printStackTrace();}
+				
 			  	driver.close();
 			 }
 	
 		  if(d1[i][0].equalsIgnoreCase("TC2"))
 		  {	
+			  try
+			  {
+
 				  System.out.println("TC2 Execution started.....");
 				  driver = new FirefoxDriver();
 				  driver.get(Object.getProperty("URL"));
@@ -129,7 +138,10 @@ public class Login extends TestCore
 					rc++;
 					String scr = t.CaptureScreenshot();
 					excel.writeFail(d1[i][0], counter, sheet, acop,scr);				
-				}	 
+				}
+			  }catch(Exception e)
+				{node.log(LogStatus.SKIP, "Skipped TC2 Execution, it is because of page loading issue or due to some other issue");
+				e.printStackTrace();}
 		  }
 		  
 		}

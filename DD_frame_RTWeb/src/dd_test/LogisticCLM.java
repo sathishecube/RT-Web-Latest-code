@@ -54,12 +54,13 @@ public class LogisticCLM extends TestCore
 					driver.navigate().refresh();
 					Thread.sleep(2000);
 					if(t.isAlertPresent(driver))
-						driver.switchTo().alert().accept();					
-					while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
-						Thread.sleep(1000);
-				
-					
-				
+					{
+						Alert alert;
+						alert = driver.switchTo().alert();
+						System.out.println(alert.getText());
+						String chk1 = driver.switchTo().alert().getText();
+						alert.accept();
+					}
 					long stime=System.currentTimeMillis();
 					
 					if (d1[i][0].equalsIgnoreCase("TC1"))
@@ -67,7 +68,7 @@ public class LogisticCLM extends TestCore
 						try
 						{
 							System.out.println("TC1 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(5000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();							
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -119,7 +120,10 @@ public class LogisticCLM extends TestCore
 					try
 					{
 						System.out.println("TC2 Execution started.....");
-	  					Thread.sleep(8000);
+						Thread.sleep(5000);
+						while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						
+							Thread.sleep(1000);
+	  					//Thread.sleep(8000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -390,13 +394,21 @@ public class LogisticCLM extends TestCore
 						
 							driver.findElement(By.xpath(Object.getProperty("LUClearAlarm"))).click();
 							driver.findElement(By.xpath(Object.getProperty("AlarmSendCommand"))).click();
-						
-							
+							Thread.sleep(2000);
+		  					if(t.isAlertPresent(driver))
+								{
+									Alert alert;
+									alert = driver.switchTo().alert();
+									System.out.println(alert.getText());
+									String chk1 = driver.switchTo().alert().getText();
+									alert.accept();
+								}
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						
 								Thread.sleep(1000);
 							
 							String getVal1 = driver.findElement(By.xpath(Object.getProperty("LUErrorPopup1"))).getText();
-							driver.findElement(By.xpath(Object.getProperty("LUErrorPopup1"))).click();
+							//driver.findElement(By.xpath(Object.getProperty("LUErrorPopup1"))).click();
+							Thread.sleep(2000);
 							if (d1[i][8].contains("#"))
 							{
 								String[] expt = d1[i][8].split("#");
@@ -434,10 +446,12 @@ public class LogisticCLM extends TestCore
 					{
 						try
 						{
+							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						
+								Thread.sleep(1000);
 							System.out.println( "TC5 Execution started.....");
 							Thread.sleep(50000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();	
-							Thread.sleep(10000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);							
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						
@@ -649,7 +663,7 @@ public class LogisticCLM extends TestCore
   				        System.out.println(winHandle);
   				        driver.switchTo().window(winHandle);        // switch focus of WebDriver to the next found window handle (that's your newly opened window)              
   				    }
-  					Thread.sleep(2000);
+  					Thread.sleep(5000);
   					Robot r = new Robot();
 	  				r.keyPress(KeyEvent.VK_ESCAPE);
 	  				r.keyRelease(KeyEvent.VK_ESCAPE);
@@ -703,7 +717,7 @@ public class LogisticCLM extends TestCore
 						pageSize=page.size();
   					try
   					{
-  					BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\CLMReport.xls"));
+  					BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\CLMReport.xls"));
   					String line;
   					
   					int m=0;

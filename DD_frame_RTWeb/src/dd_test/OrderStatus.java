@@ -58,9 +58,9 @@ public class OrderStatus extends TestCore
   					try
   					{
   						System.out.println("TC1 Execution started.....");
-  						Thread.sleep(8000);
+  						Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-  						Thread.sleep(8000);
+  						Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
   						driver.findElement(By.xpath(Object.getProperty("OSFrozenFoodSelect"))).click();
   						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						
@@ -174,7 +174,13 @@ public class OrderStatus extends TestCore
   						
   						
   						}
-  						driver.findElement(By.xpath(Object.getProperty("ReeferSearch"))).clear();
+  						driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
+  						if(s.isAlertPresent(driver))
+						{
+							driver.switchTo().alert().accept();
+						}		
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))				
+							Thread.sleep(1000);
   						
   					}catch(Exception e)
   					{e.printStackTrace();}
@@ -348,7 +354,7 @@ public class OrderStatus extends TestCore
 						{
   						
 							driver.findElement(By.xpath(Object.getProperty("OSOrigin"))).clear();
-							driver.findElement(By.xpath(Object.getProperty("OSOrigin"))).sendKeys("LANCTX");
+							driver.findElement(By.xpath(Object.getProperty("OSOrigin"))).sendKeys("Grand Island, NE");
 							Thread.sleep(1000);
 							driver.findElement(By.xpath(Object.getProperty("OSApplyButton"))).click();
 							while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
@@ -381,7 +387,7 @@ public class OrderStatus extends TestCore
   							Thread.sleep(1000);
   						
   						driver.findElement(By.xpath(Object.getProperty("OSDestination"))).clear();
-  						driver.findElement(By.xpath(Object.getProperty("OSDestination"))).sendKeys("DUNDFL");
+  						driver.findElement(By.xpath(Object.getProperty("OSDestination"))).sendKeys("Denver, CO");
   						driver.findElement(By.xpath(Object.getProperty("OSApplyButton"))).click();
   						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  						
   							Thread.sleep(1000);
@@ -516,7 +522,7 @@ public class OrderStatus extends TestCore
   							String scr = s.CaptureScreenshot();
   							excel.writeFail(input[i][0], counter, sheet, acop,scr);
 						}
-						Thread.sleep(8000);
+						Thread.sleep(4000);
 						strFilterResult = Cs.disparity(driver, Object, "121", "orderStatus", "7", false, "Text", "OSApplyButton","OSClearFilter");
 						//s.clearFilter(driver, Object, "OSClearFilter");
 						System.out.println("<<<<<<<<<<<<<<<<<<<Disparity Status Filter Status>>>>>>>>>>>>>"+strFilterResult);
@@ -769,7 +775,7 @@ public class OrderStatus extends TestCore
 						pageSize=page.size();
   					try
   					{
-  					BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\OrderStatusReport.xls"));
+  					BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\OrderStatusReport.xls"));
   					String line;
   					
   					int m=0;
@@ -1076,9 +1082,9 @@ public class OrderStatus extends TestCore
   					try
   					{
   					System.out.println( "TC15 Execution started.....");
-  					Thread.sleep(8000);
+  					Thread.sleep(4000);
   					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-  					Thread.sleep(8000);
+  					Thread.sleep(4000);
   					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
   					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
   					while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						

@@ -56,9 +56,9 @@ public class LogisticWayBill extends TestCore
 						try
 						{
 							System.out.println("TC1 Execution started.....");
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(4000);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))							
@@ -110,7 +110,7 @@ public class LogisticWayBill extends TestCore
 	  						System.out.println("TC2 Execution started.....");
 	  						Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  						Thread.sleep(8000);
+	  						Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  						driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  						while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  						
@@ -194,7 +194,7 @@ public class LogisticWayBill extends TestCore
   							System.out.println( "TC3 Execution started.....");
   							Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  						Thread.sleep(8000);
+	  						Thread.sleep(4000);
 	  						driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  						driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  						while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  						
@@ -318,10 +318,10 @@ public class LogisticWayBill extends TestCore
   					{
   						try
   						{
-  							Thread.sleep(8000);
+  							Thread.sleep(4000);
   							System.out.println("TC4 Execution started.....");
   							driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-  							Thread.sleep(8000);
+  							Thread.sleep(4000);
   							driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
   							driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
   							while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  							
@@ -505,7 +505,7 @@ public class LogisticWayBill extends TestCore
 	  				if (d1[i][0].equalsIgnoreCase("TC7"))
   					{
   						System.out.println( "TC7 Execution started.....");
-  						Thread.sleep(8000);
+  						Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
   						Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
@@ -576,7 +576,7 @@ public class LogisticWayBill extends TestCore
   						pageSize=page.size();
 	  					try
 	  					{
-	  					BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\WaybillReport.xls"));
+	  					BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\WaybillReport.xls"));
 	  					String line;
 	  					
 	  					int m=0;
@@ -827,9 +827,9 @@ public class LogisticWayBill extends TestCore
 	  				if(d1[i][0].equalsIgnoreCase("TC14"))
 	  				{
 	  					System.out.println( "TC14 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-  						Thread.sleep(8000);
+  						Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  					while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  						
@@ -879,9 +879,9 @@ public class LogisticWayBill extends TestCore
 							Thread.sleep(5000);
 						
 	  					System.out.println( "TC15 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-  						Thread.sleep(8000);
+  						Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  					while(t.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))  						

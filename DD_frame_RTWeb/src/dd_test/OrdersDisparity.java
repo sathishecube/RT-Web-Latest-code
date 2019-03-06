@@ -68,9 +68,9 @@ public class OrdersDisparity extends TestCore
 	  					try
 	  					{
 	  					System.out.println("TC1 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("OSFrozenFoodSelect"))).click();
 	  					while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
@@ -411,7 +411,7 @@ public class OrdersDisparity extends TestCore
 	  					{
 	  						
 	  						driver.findElement(By.xpath(Object.getProperty("ODOrigin"))).clear();
-	  						driver.findElement(By.xpath(Object.getProperty("ODOrigin"))).sendKeys("LANCTX");
+	  						driver.findElement(By.xpath(Object.getProperty("ODOrigin"))).sendKeys("Tar Heel, NC");
 	  						driver.findElement(By.xpath(Object.getProperty("ODApplyButton"))).click();
 	  						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))	  						
 	  							Thread.sleep(1000);
@@ -443,7 +443,7 @@ public class OrdersDisparity extends TestCore
 	  							Thread.sleep(1000);
 	  						
 	  						driver.findElement(By.xpath(Object.getProperty("ODDistination"))).clear();
-	  						driver.findElement(By.xpath(Object.getProperty("ODDistination"))).sendKeys("DUNDFL");
+	  						driver.findElement(By.xpath(Object.getProperty("ODDistination"))).sendKeys("Hammond, LA");
 	  						driver.findElement(By.xpath(Object.getProperty("ODApplyButton"))).click();
 	  						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
 	  							Thread.sleep(1000);
@@ -492,7 +492,7 @@ public class OrdersDisparity extends TestCore
   							String scr = s.CaptureScreenshot();
   							excel.writeFail(tc, counter, sheet, acop,scr);
   						}
-  						strFilterResult = Cs.checkFilterValue(driver, Object, "125", "disparityStatus", "5", true, "Text", "ODApplyButton","ODClearFilter");  					
+  						strFilterResult = Cs.checkFilterValue(driver, Object, "125", "disparityStatus", "5", false, "Text", "ODApplyButton","ODClearFilter");  					
   						System.out.println("<<<<<<<<<<<<<<<<<<<<<Disparity Filter Status>>>>>>>>>>>>>"+strFilterResult);
   						if (strFilterResult == true)
   						{
@@ -511,7 +511,7 @@ public class OrdersDisparity extends TestCore
   							String scr = s.CaptureScreenshot();
   							excel.writeFail(tc, counter, sheet, acop,scr);
   						}
-  						strFilterResult = Cs.checkFilterValue(driver, Object, "125", "ackStatus", "5", true, "Text", "ODApplyButton","ODClearFilter");  						
+  						strFilterResult = Cs.checkFilterValue(driver, Object, "125", "ackStatus", "5", false, "Text", "ODApplyButton","ODClearFilter");  						
   						System.out.println("<<<<<<<<<<<<<<<<<<<<<Disparity Filter Status>>>>>>>>>>>>>"+strFilterResult);
   						if (strFilterResult == true)
   						{
@@ -796,7 +796,7 @@ public class OrdersDisparity extends TestCore
   						pageSize=page.size();
 	  					try
 	  					{
-	  					BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\DisparityStatusReport.xls"));
+	  					BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\DisparityStatusReport.xls"));
 	  					String line;
 	  					
 	  					int m=0;
@@ -1580,7 +1580,7 @@ public class OrdersDisparity extends TestCore
 	  						{
 	  							System.out.println("Alert Message should display Please Select a Asset message");
 	  							System.out.println("Actual"+getVal);
-	  							System.out.println("Filter functionality is working fine");
+	  							//System.out.println("Filter functionality is working fine");
   								acop = "Error Message = "+getVal;
   								node.log(LogStatus.PASS, acop);
   	  							data.put(""+rc, new Object[] {tc, "OrderDisparity", tcdesc, expt[0], acop, "Pass", s.timestamp(stime)});
@@ -1599,8 +1599,7 @@ public class OrdersDisparity extends TestCore
 	  							
 	  						}	  						
 	  						
-	  						if(s.isElementPresent(By.xpath(".//*[@id='div-125-datagrid-tbody']/tr[1]/td[1]/label/span[2]/span"), driver))
-	  						{
+	  						Thread.sleep(2000);
 	  							driver.findElement(By.xpath(".//*[@id='div-125-datagrid-tbody']/tr[1]/td[1]/label/span[2]/span")).click();
 	  						driver.findElement(By.xpath(Object.getProperty("MoreActions"))).click();
 	  						if(s.isElementPresentcheck(By.xpath(Object.getProperty("LUClearAlarm")),driver) && s.isElementPresentcheck(By.xpath(Object.getProperty("ODMoreActionAck")),driver)) 
@@ -1614,10 +1613,13 @@ public class OrdersDisparity extends TestCore
 	  							System.out.println("Some values are wrong");
 	  						}
 	  						
-	  					}
+	  					
 	  					
 	  					driver.findElement(By.xpath(Object.getProperty("LUClearAlarm"))).click();
+	  					if(s.isElementPresentcheck(By.xpath(Object.getProperty("LUSendCommand")), driver))
+	  					{
 	  					driver.findElement(By.xpath(Object.getProperty("LUSendCommand"))).click();
+	  					}
 	  					
 	  					if(s.isAlertPresent(driver))
 							{
