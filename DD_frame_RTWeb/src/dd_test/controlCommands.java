@@ -58,6 +58,7 @@ public class controlCommands extends TestCore
 	  				String assetId = input[i][6];
 	  				String message = input[i][7];
 	  				String date = input[i][8];
+	  				String hex = input[i][10];
 	  				
 	  				driver.findElement(By.xpath(".//*[@id='div-100-sub-lnk']")).click();	  				
 	  				while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
@@ -110,7 +111,7 @@ public class controlCommands extends TestCore
 							System.out.println("TC2 Execution started.....");
 							try
 							{
-							if(help.setPoint(driver, Object,assetId,message, date))
+							if(help.setPoint(driver, Object, assetId, message, date, hex))
 							{
 								
 								System.out.println("Set Point test successful...");
@@ -166,7 +167,7 @@ public class controlCommands extends TestCore
 							System.out.println("TC4 Execution started.....");
 							try
 							{
-							if(help.sendReeferActions(driver, Object,assetId,date,message))
+							if(help.sendReeferActions(driver, Object, assetId, date, message, hex))
 							{
 								System.out.println("Send reefer Action test successful...");
 								data.put(""+rc, new Object[] {tc, "Control Commands", tcdesc, eopt, "Send reefer Action test successful...", "Pass", s.timestamp(stime)});
@@ -193,7 +194,7 @@ public class controlCommands extends TestCore
 							System.out.println("TC5 Execution started.....");
 							try
 							{
-							if(help.powerControl(driver, Object,assetId,message))
+							if(help.powerControl(driver, Object, assetId, message))
 							{
 								
 								System.out.println("Power Control test successful...");
@@ -221,7 +222,7 @@ public class controlCommands extends TestCore
 							System.out.println("TC6 Execution started.....");
 							try
 							{
-							if(help.sendPowerControl (driver, Object,assetId,date,message))
+							if(help.sendPowerControl (driver, Object,assetId,date,message,hex))
 							{
 								System.out.println("Send reefer Action test successful...");
 								data.put(""+rc, new Object[] {tc, "Control Commands", tcdesc, eopt, "Send reefer Action test successful...", "Pass", s.timestamp(stime)});

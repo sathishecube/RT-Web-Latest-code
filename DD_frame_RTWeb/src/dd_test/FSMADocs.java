@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -36,7 +37,7 @@ public class FSMADocs extends TestCore
 		{
 			
 			driver = new FirefoxDriver(s.excelDownload());
-			driver.get(Object.getProperty("URL1"));
+			driver.get(Object.getProperty("URL"));
 			if(s.dologin(driver ,d1[0][2], d1[0][3]))
 			{
 			System.out.println("FSMA Docs Module");
@@ -61,11 +62,8 @@ public class FSMADocs extends TestCore
 					Thread.sleep(1000);
 					
 				
-					if(!(s.isElementPresentcheck(By.xpath(Object.getProperty("Searchbox")), driver)) ||
-							!(s.isElementPresentcheck(By.xpath(Object.getProperty("Editdaterange")), driver)) || 
-							!(s.isElementPresentcheck(By.xpath(Object.getProperty("MoreActions")), driver)) || 
-							!(s.isElementPresentcheck(By.xpath(Object.getProperty("FSMADashboard")), driver)) ||
-							!(s.isElementPresentcheck(By.xpath(Object.getProperty("FSMADropdown")), driver)))
+					if(!(s.isElementPresentcheck(By.xpath(Object.getProperty("Searchbox")), driver)) ||	!(s.isElementPresentcheck(By.xpath(Object.getProperty("Editdaterange")), driver)) || 
+							!(s.isElementPresentcheck(By.xpath(Object.getProperty("MoreActions")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("FSMADashboard")), driver)))
 					{
 						System.out.println("The elements are not present in FSMA Docs");
 						acop = "The elements are not present in FSMA Docs";
@@ -86,13 +84,13 @@ public class FSMADocs extends TestCore
 					}
 						
 						driver.findElement(By.xpath(Object.getProperty("Reefers"))).click();
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+							Thread.sleep(1000);
 						if(!(s.isElementPresentcheck(By.xpath(Object.getProperty("MultiTemp")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("Maintenance")), driver)) ||
 								!(s.isElementPresentcheck(By.xpath(Object.getProperty("Pretrip")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("Alarm")), driver)) ||
-								!(s.isElementPresentcheck(By.xpath(Object.getProperty("TempProfile")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("ITA")), driver)) ||
-								!(s.isElementPresentcheck(By.xpath(Object.getProperty("SM")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("FuelFlow")), driver)) ||
-								!(s.isElementPresentcheck(By.xpath(Object.getProperty("DoorAlarm")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("Status")), driver)) ||
-								!(s.isElementPresentcheck(By.xpath(Object.getProperty("Route1")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("HMIDisplay")), driver)) ||
-								!(s.isElementPresentcheck(By.xpath(Object.getProperty("FTA")), driver)) ||	!(s.isElementPresentcheck(By.xpath(Object.getProperty("FSMADocs")), driver)))
+								!(s.isElementPresentcheck(By.xpath(Object.getProperty("ITA")), driver)) ||!(s.isElementPresentcheck(By.xpath(Object.getProperty("SM")), driver)) || 
+								!(s.isElementPresentcheck(By.xpath(Object.getProperty("FuelFlow")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("DoorAlarm")), driver)) || 
+								!(s.isElementPresentcheck(By.xpath(Object.getProperty("HMIDisplay")), driver)) ||!(s.isElementPresentcheck(By.xpath(Object.getProperty("FTA")), driver)))
 						{
 							System.out.println("FSMA Status Page not loaded Successfully");
 							acop = "FSMA Status Page not Loaded Successfully";
@@ -111,6 +109,8 @@ public class FSMADocs extends TestCore
 							rc++;
 							excel.writePass(d1[i][0], counter, sheet, acop);							
 						}	
+						//driver.findElement(By.xpath(Object.getProperty("Reefers"))).click();
+						
 					}catch(Exception e)
 					{e.printStackTrace();
 					}
@@ -211,7 +211,8 @@ public class FSMADocs extends TestCore
 						
 						Thread.sleep(10000);
 						driver.findElement(By.xpath(Object.getProperty("FSMADocs"))).click();
-						Thread.sleep(10000);
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+							Thread.sleep(1000);
 						driver.findElement(By.xpath(".//*[@id='div-142-datagrid-tbody']/tr[1]/td[1]/label/span[2]/span")).click();
 						driver.findElement(By.xpath(Object.getProperty("MoreActions"))).click();
 						driver.findElement(By.xpath(".//*[@id='btn-upload-FSMA-doc-command']/button")).click();
@@ -611,7 +612,7 @@ public class FSMADocs extends TestCore
 
 						try
 						{
-						BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\FSMADocsReport.xls"));
+						BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\FSMADocsReport.xls"));
 						String line;
 						//int m=0;
 						while ((line = reader.readLine()) != null)
