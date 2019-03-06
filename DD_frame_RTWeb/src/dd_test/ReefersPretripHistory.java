@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.TreeMap;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,7 +64,7 @@ public class ReefersPretripHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC1 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(d1[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -141,6 +142,20 @@ public class ReefersPretripHistory extends TestCore
 						  	rc++;
 						  	excel.writePass(d1[i][0], counter, sheet, acop);  						  
   					}	
+	  					driver.findElement(By.xpath(Object.getProperty("Reefers"))).click();
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+							Thread.sleep(1000);
+						driver.findElement(By.xpath(Object.getProperty("ClearButton"))).click();
+						if(s.isAlertPresent(driver))
+						{
+							Alert alert;
+							alert = driver.switchTo().alert();
+							System.out.println(alert.getText());
+							String chk1 = driver.switchTo().alert().getText();								
+							alert.accept();
+						}
+						while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+							Thread.sleep(1000);
 	  					}catch(Exception e){
 	  						e.printStackTrace();
 	  					}
@@ -607,7 +622,7 @@ public class ReefersPretripHistory extends TestCore
 	  			 	pageSize=page.size();
 	  			 	try
 	  			 	{
-	  			 	BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\PretripHistoryReport("+Chk+").xls"));
+	  			 	BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\PretripHistoryReport("+Chk+").xls"));
 	  			 	String line;
 	  			 	
 	  			 	int m=0;

@@ -33,10 +33,10 @@ public class ReeferRouteHistory  extends TestCore
 	static TestUtil s =new TestUtil();
 	static LogisticUtils CS =new LogisticUtils();
 	
-	public static Map<String, Object[]> RouteHistory(Map<String, Object[]> data, int rc ,String sheet, ExtentTest test ,int scase,int ecase)
+	public static Map<String, Object[]> TKHMIHistory(Map<String, Object[]> data, int rc ,String sheet, ExtentTest test ,int scase,int ecase)
 	{
-		ExtentTest node = reports.startTest("ReeferRouteHistory");
-		String[][] input =TestUtil.getData("ReeferRouteHistory");
+		ExtentTest node = reports.startTest("TKHMIDisplayHistory");
+		String[][] input =TestUtil.getData("TKHMIDisplayHistory");
 		
 		String acop =null;
 		int counter =1;
@@ -559,7 +559,7 @@ public class ReeferRouteHistory  extends TestCore
 	  			 	pageSize=page.size();
 	  			 	try
 	  			 	{
-	  			 	BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\ReeferAssetHistoryReport_"+Chk+".xls"));
+	  			 	BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\ReeferAssetHistoryReport_"+Chk+".xls"));
 	  			 	String line;
 	  			 	
 	  			 	int m=0;

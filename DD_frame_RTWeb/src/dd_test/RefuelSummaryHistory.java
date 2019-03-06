@@ -59,9 +59,9 @@ public class RefuelSummaryHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println("TC1 Execution started.....");
-	  					Thread.sleep(8000);
+	  					Thread.sleep(4000);
   						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
-  						Thread.sleep(8000);
+  						Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
 	  					while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
@@ -398,7 +398,7 @@ public class RefuelSummaryHistory extends TestCore
   						pageSize=page.size();
 	  					try
 	  					{
-	  					BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\RefuelSummaryHistoryReport.xls"));
+	  					BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\RefuelSummaryHistoryReport.xls"));
 	  					String line;
 	  					
 	  					int m=0;

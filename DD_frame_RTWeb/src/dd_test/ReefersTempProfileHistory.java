@@ -65,7 +65,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC1 Execution started.....");
-	  						Thread.sleep(5000);
+	  						Thread.sleep(4000);
 	  					
 	  						driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  						driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
@@ -103,17 +103,12 @@ public class ReefersTempProfileHistory extends TestCore
 	  					
 	  							if(!(s.isElementPresentcheck(By.xpath(Object.getProperty("StatusHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("MultiTempHistory")), driver)) || 
 	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("MaintenanceHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("PretripHistory")), driver)) ||
-	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("AlarmHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("UtilizationHistory")), driver)) ||
-	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("TempProfileHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("ImpactHistory")), driver)) ||
-	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("ITAHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("SMHistory")), driver)) ||
-	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("FuelFlowHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("WaybillHistory")), driver)) ||
-	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("DoorAlarmHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("DisparityHistory")), driver)) ||
-	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("EditDateRange")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("RefreshIcon")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("PrintIcon")), driver)) ||
+	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("AlarmHistory")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("EditDateRange")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("RefreshIcon")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("PrintIcon")), driver)) ||
 	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("PageNumber")), driver))  ||	!(s.isElementPresentcheck(By.xpath(Object.getProperty("DateTimeIcon")), driver)) || 
 	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("TemperatureIcon")), driver)) ||	!(s.isElementPresentcheck(By.xpath(Object.getProperty("FuelLevelIcon")), driver)) || 
 	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("DistanceCalcIcon")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("pollCommands")), driver)) || 
 	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("ControlCommands")), driver)) ||	!(s.isElementPresentcheck(By.xpath(Object.getProperty("MoreActions")), driver)) || 
-	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("ControlProbeIcon")), driver)) || !(s.isElementPresentcheck(By.xpath(Object.getProperty("TempProfileDashboard")), driver)))
+	  									!(s.isElementPresentcheck(By.xpath(Object.getProperty("ControlProbeIcon")), driver)))
 	  							{
 	  								System.out.println("Page not loaded Successfully");
 	  								acop = "Reefers History Page not Loaded Successfully";
@@ -159,7 +154,7 @@ public class ReefersTempProfileHistory extends TestCore
 		  				String eDate =s.dateConvert(input[i][7]);
 		  						  				
 	  					
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -332,7 +327,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC3 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -422,7 +417,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC4 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -454,7 +449,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					if(s.isElementPresentcheck(By.xpath(".//*[@id='div-407-datagrid-tbody']/tr"), driver))
 	  					{
 	  				driver.findElement(By.xpath(Object.getProperty("PrintIcon"))).click();
-  					Thread.sleep(5000);
+  					Thread.sleep(4000);
   					ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
   					
   					System.out.println(tabs2.get(0));
@@ -515,7 +510,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC5 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -587,7 +582,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC6 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -658,7 +653,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC7 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -724,7 +719,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC8 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  					driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -797,7 +792,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC9 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -869,7 +864,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC10 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -980,7 +975,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC11 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -1055,7 +1050,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC12 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -1184,7 +1179,7 @@ public class ReefersTempProfileHistory extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC13 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();

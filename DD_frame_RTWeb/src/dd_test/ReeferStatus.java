@@ -90,7 +90,7 @@ public class ReeferStatus extends TestCore
 								Thread.sleep(1000);
 							}while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver));
 
-							if(driver.findElement(By.xpath(".//*[@id='div-100-columnSettings']/div/div/div[1]/div[1]/label/span")).isSelected())
+							if(driver.findElement(By.xpath(".//*[@id='div-100-columnSettings']/div/div/div[1]/div[1]/label/span/span")).isSelected())
 							{
 								System.out.println("All Columns selected");
 								driver.findElement(By.xpath(Object.getProperty("ShowHideColumnCancel"))).click();
@@ -431,7 +431,7 @@ public class ReeferStatus extends TestCore
 								Thread.sleep(1000);
 							}while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver));
 
-							if(driver.findElement(By.xpath(".//*[@id='div-100-columnSettings']/div/div/div[1]/div[1]/label/span")).isSelected())
+							if(driver.findElement(By.xpath(".//*[@id='div-100-columnSettings']/div/div/div[1]/div[1]/label/span/span")).isSelected())
 							{
 								System.out.println("All Columns selected");
 								driver.findElement(By.xpath(Object.getProperty("ShowHideColumnCancel"))).click();
@@ -1130,9 +1130,9 @@ public class ReeferStatus extends TestCore
 
 							driver.findElement(By.xpath(Object.getProperty("SelectAssetTags"))).click();
 							while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						
-								Thread.sleep(1000);
+								Thread.sleep(3000);
 
-							if(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))
+							if(s.isElementPresentcheck(By.xpath("/html/body/main/div[2]/div[1]/ul/li[2]/div[8]/div/div/ul/li[2]"), driver))
 							{
 								driver.findElement(By.xpath(Object.getProperty("AssetTag"))).click();
 								while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))						
@@ -1162,12 +1162,12 @@ public class ReeferStatus extends TestCore
 										Test = false;
 									}
 									driver.findElement(By.xpath(Object.getProperty("SelectAssetTags"))).click();
-									while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))								
+									while(s.isElementPresentcheck(By.xpath("/html/body/main/div[2]/div[1]/ul/li[2]/div[8]/div/div/ul/li[2]"), driver))								
 										Thread.sleep(1000);
 
 									driver.findElement(By.xpath(Object.getProperty("AssetTag"))).click();
 									while(s.isElementPresentcheck(By.xpath(".//*[@id='DivOverlayChild']"), driver))								
-										Thread.sleep(1000);
+										Thread.sleep(2000);
 
 									if(s.isElementPresentcheck(By.xpath(".//*[@id='div-100-datagrid-tbody']/tr"), driver))
 									{	
@@ -1964,7 +1964,7 @@ public class ReeferStatus extends TestCore
 							pageSize=page.size();
 							try
 							{
-								BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\ReeferReport.xls"));
+								BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\ReeferReport.xls"));
 								String line;
 
 								int m=0;
@@ -2042,9 +2042,9 @@ public class ReeferStatus extends TestCore
 
 							int Record = Integer.parseInt(Records);
 							driver.findElement(By.xpath(Object.getProperty("ExcelDownloadAll"))).click();
-							Thread.sleep(8000);
+							Thread.sleep(12000);
 
-							CSVReader reader = new CSVReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\StatusReport-All.csv"));
+							CSVReader reader = new CSVReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\StatusReport-All.csv"));
 							// this will load content into list
 							List<String[]> li=reader.readAll();
 							System.out.println("Total rows which we have is "+li.size());

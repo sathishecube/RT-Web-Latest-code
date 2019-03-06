@@ -70,7 +70,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  					System.out.println( "TC1 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -132,7 +132,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -162,7 +162,7 @@ public class ReefersAlarmHistory  extends TestCore
 		  				String eDate =s.dateConvert(input[i][7]);
 		  				
 		  				System.out.println( "TC2 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  					driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 		  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -311,7 +311,7 @@ public class ReefersAlarmHistory  extends TestCore
 		  				Thread.sleep(1000);
 		  				
 		  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-		  				Thread.sleep(5000);
+		  				Thread.sleep(4000);
 		  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 			  			if(s.isAlertPresent(driver))
 			  			{
@@ -338,7 +338,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC3 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -405,7 +405,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -432,7 +432,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC4 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -465,7 +465,7 @@ public class ReefersAlarmHistory  extends TestCore
   					{	  				
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("PrintIcon"))).click();
-  					Thread.sleep(5000);
+  					Thread.sleep(4000);
   					ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
   					
   					System.out.println(tabs2.get(0));
@@ -507,7 +507,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -535,7 +535,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					{
 	  					
 	  						System.out.println( "TC5 Execution started.....");
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -599,7 +599,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  			 	pageSize=page.size();
 	  			 	try
 	  			 	{
-	  			 	BufferedReader reader = new BufferedReader(new FileReader("\\\\amxserver\\amx-share\\STW_QA\\Rtweb Automation\\Downloaded Excel\\AlarmHistoryReport("+Chk+").xls"));
+	  			 	BufferedReader reader = new BufferedReader(new FileReader("E:\\workspace\\RT_Web_Automation_Excel_Download\\AlarmHistoryReport("+Chk+").xls"));
 	  			 	String line;
 	  			 	
 	  			 	int m=0;
@@ -649,7 +649,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -677,7 +677,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC6 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -734,7 +734,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -763,7 +763,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC7 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -818,7 +818,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -846,7 +846,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC8 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -901,7 +901,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -930,7 +930,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC9 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -986,7 +986,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1015,7 +1015,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC10 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -1072,7 +1072,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1099,7 +1099,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC11 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -1195,7 +1195,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1224,7 +1224,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC12 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -1283,7 +1283,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  				Thread.sleep(1000);
 	  				
 	  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-	  				Thread.sleep(5000);
+	  				Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 		  			if(s.isAlertPresent(driver))
 		  			{
@@ -1312,7 +1312,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC13 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -1428,7 +1428,7 @@ public class ReefersAlarmHistory  extends TestCore
 		  				Thread.sleep(1000);
 		  				
 		  				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-		  				Thread.sleep(5000);
+		  				Thread.sleep(4000);
 		  				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 			  			if(s.isAlertPresent(driver))
 			  			{
@@ -1457,7 +1457,7 @@ public class ReefersAlarmHistory  extends TestCore
 	  					try
 	  					{
 	  						System.out.println( "TC14 Execution started.....");
-	  					Thread.sleep(5000);
+	  					Thread.sleep(4000);
 	  				driver.findElement(By.xpath(Object.getProperty("FleetSelect"))).click();
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetInput"))).sendKeys(input[i][4]);
 	  				driver.findElement(By.xpath(Object.getProperty("AllFleetSelect"))).click();
@@ -1605,7 +1605,7 @@ public class ReefersAlarmHistory  extends TestCore
   				Thread.sleep(1000);
   				
   				driver.findElement(By.xpath(Object.getProperty("Alarm"))).click();
-  				Thread.sleep(5000);
+  				Thread.sleep(4000);
   				driver.findElement(By.xpath(Object.getProperty("ClearSearch"))).click();
 	  			if(s.isAlertPresent(driver))
 	  			{
